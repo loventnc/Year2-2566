@@ -1,0 +1,98 @@
+* {
+    margin: 0%; /* จัดหน้ากระดาษ */
+    padding: 0%;
+    box-sizing: border-box; /* set หน้าจอให้ไม่ขยับ พอดีกับจอคอม */
+}
+
+header {
+    height: 100vh; /* เต็มหน้าจอคอม 1 หน้าจอ */
+    background-image: linear-gradient(to bottom right, rgba(19,150,30, 0.77), rgba(27, 189, 238, 0.77)),url("background.jpeg"); /* ทำพื้นหลังแล้วมีไล่สีทับ */
+    background-size: cover; /* ทำให้รูปแสดงพอดีกับหน้าจอ */
+    clip-path: polygon(0 0, 100% 2%, 100% 90%, 0% 100%); /* ทำให้รูปตัดเป็นคางหมู https://bennettfeely.com/clippy/ */
+    display: flex;
+    justify-content: center; /* ทำให้อยู่ตรงกลางในแนวนอน */
+    align-items: center; /* ทำให้อยู่ตรงกลางในตั้ง */
+    flex-direction: column; /* จัดข้อความลงมาตามคอลัมม์ */
+    position: relative; 
+    font-family: "Poppins", sans-serif; 
+    text-transform: uppercase; 
+}
+
+img {
+    width: 45px;
+    position: absolute; /* fix บน ซ้าย */
+    top: 40px; 
+    left: 40px; 
+}
+
+h1 {
+    text-align: center; /* ทำให้ข้อความอยู่ตรงกลาง */
+    display: flex;
+    flex-direction: column; /* จัดข้อความลงมาตามคอลัมม์ */
+    align-items: center; 
+}
+
+span:first-child {
+    animation: text1 2s ease-in-out;
+    line-height: 1.5;
+    letter-spacing: 10px;
+    color: #fff;
+    font-size: 80px; 
+}
+
+span:nth-child(2) {
+    animation: text2 2s ease-in-out;
+    letter-spacing: 10px;
+    color: #fff;
+    text-align: center; 
+    font-size: 28px; 
+}
+ 
+@keyframes text1 {
+    0% {
+        opacity: 0; /* ความโปร่งแสง */
+        transform: translateX(-12%);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateX(3%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes text2 {
+    0% {
+        opacity: 0;
+        transform: translateX(12%);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateX(-3%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+a {
+    display: inline-block; 
+    padding: 17px 40px; /*กว้างออก บน ขวา ล่าง ซ้าย*/
+    background-color: #ffffff;
+    color: #7f7f7f; 
+    font-weight: 100;
+    font-size: 14px;
+    text-decoration: none; /*ทำให้มีแต่ข้อความเปล่าๆ ไม่มีเส้นใต้*/
+    margin-top: 10px; /*ระยะห่าง*/
+    border-radius: 30px; /*ความมนของกรอบ*/
+}
+
+a:hover {
+    /* background-color: #ffffff;
+    color:  #7f7f7f; */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+}

@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+.btn-hamburger {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.ham {
+    display: none;
+}
+@media screen and (max-width: 1vh) {
+    .content {
+        width: 100%;
+    }
+}
+nav {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.btn-hamburger {
+    display: block;
+    position: fixed;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+}
+.btn-hamburger:hover {
+    background-color: white;
+}
+
+/* Set top background */
+.background {
+    height: 100vh;
+    background-image: url("background.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 120px;
+    position: absolute; /* fix บน ซ้าย */
+    top: 100px; 
+    left: 60px; 
+}
+
+/* Top text */
+.bigtext{
+    display: flex;
+    font-size: 100px;
+    color: white;
+}
+.smalltext {
+    display: flex;
+    font-size: 40px;
+    color: white;
+}
+.search { 
+    display: inline-block;
+    background-color: #ffffff;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    color: #7f7f7f; 
+    font-weight: 100;
+    text-decoration: none; /*ทำให้มีแต่ข้อความเปล่าๆ ไม่มีเส้นใต้*/
+    margin-top: 10px; /*ระยะห่าง*/
+    border-radius: 30px; /*ความมนของกรอบ*/
+}
+.search:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Animation top text*/
+.bigtext{
+    animation-name: bigtextani;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.smalltext{
+    animation-name: smalltextani;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes bigtextani{
+    0%{
+        transform: translateX(-52%);
+        opacity: 50%;
+    }
+    80%{
+        transform: translateX(3%);
+        opacity: 90%;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity:100%;
+    }
+}
+@keyframes smalltextani{
+    0%{
+        transform: translateX(52%);
+        opacity: 50%;
+    }
+    80%{
+        transform: translateX(-3%);
+        opacity: 90%;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity:100%;
+    }
+}
+
+.bigcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+.content a{
+    display: flex;
+    justify-content: start;
+    width: 300px;
+    font-size: 20px;
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+.photo1 {
+    width: 400px;
+    height: 300px;
+    margin: 0;
+}
+
+/* Responsive Screen */
+@media only screen and (max-width: 800px){ 
+    .photo{
+        grid-template-columns: 1fr;
+    }
+    .background{
+        grid-template-columns: 1fr;
+    }
+    .photo img{
+        flex: 40%;
+        max-width: 40%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .photo img{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/*cooment*/
+.comment {
+    display: flex;
+    justify-content: start;
+    font-size: 30px;
+    width: 300px;
+}
+
+/*homelink*/
+.home {
+    display: grid;
+    flex-direction: column;
+    text-decoration: none;
+}
+.home00{
+    display: grid;
+    color: white;
+    background-color: black;
+    height: 35px;
+}
+
+/*fellow*/
+.follow {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.followlogoall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.followlogoall img {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    opacity: 0.5;
+    margin: 10px;
+}
+.followlogoall img:hover {
+    opacity: 1;
+}

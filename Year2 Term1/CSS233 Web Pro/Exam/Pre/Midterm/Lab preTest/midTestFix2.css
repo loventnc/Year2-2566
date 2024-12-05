@@ -1,0 +1,175 @@
+@import "https://fonts.cdnfonts.com/css/raleway-5";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    font-family: "raleway";
+    background: linear-gradient(to right, rgb(75,123,198),rgb(190,69,60));
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 60%;
+    grid-template-rows: auto 40%;
+    margin: 10vh 10vw;
+    border-radius: 2rem;
+    padding: 5vh 3vw;
+    background: rgba(255, 255, 255, 0.252);
+    min-width: 70vw;
+    min-height: 70vh;
+}
+
+.text-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 1vw 1vw;
+    padding-bottom: 0;
+}
+
+.text-container h3{
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+.text-container h1 {
+    margin: 1vh 0;
+}
+
+.text-container h1 strong{
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.text-container h2{
+    margin: 1vh 0;
+    font-size: 2.7vw;
+    font-weight: 400;
+}
+
+.text-container p{
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 3vh;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1vh;
+    gap: .3vw;
+}
+
+.form-container form {
+    margin: 2vh 0;
+    width: 12vw;
+    height: 2.5vh;
+    border: 1px solid black;
+}
+
+.form-container form input{
+    width: 100%;
+    height: 100%;
+    font-family: "raleway";
+    font-size: 1.5vw;
+}
+
+.form-container a {
+    padding: .5vh .7vw;
+    background: rgb(235, 235, 235);
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vw;
+    border: 1px solid black;
+}
+
+.img-container {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: -2vh;
+}
+
+.img-container > img {
+    position: absolute;
+    width: 59%;
+    box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.2);
+    transition: .2s;
+}
+
+.img-container > img:nth-child(1) {
+    top: 0vh;
+    left: 0vw;
+}
+
+.img-container > img:nth-child(2) {
+    top: 3vh;
+    right: 0;
+}
+
+.img-container > img:nth-child(3) {
+    top: 9vh;
+    left: 10vw;
+}
+
+.img-container > img:hover {
+    transform: scale(1.05);
+    border: 10px solid rgba(255, 0, 0, 0.279);
+    box-shadow: 0 5vh 8vh 2vh rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.box-container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 0 .5vw;
+    height: 92%;
+    transition: .2s;
+}
+
+.box img {
+    width: 20%;
+    margin-top: 2vh;
+}
+
+.box h3 {
+    font-size: 4vh;
+    font-weight: 500;
+    width: 110%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.box p {
+    font-size: 2.5vh;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+
+

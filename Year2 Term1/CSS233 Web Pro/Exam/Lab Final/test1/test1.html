@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="test1.js"></script>
+    <link rel="stylesheet" href="test1.css">
+    <title>Test-1</title>
+</head>
+
+<style>
+    div {
+        padding: 50px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    .Reset {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        background-color: gray;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <h3><input type="checkbox" id="check">Use stopPropagation</h3>
+    <buntton class="Reset">Reset page</buntton>
+    <h1>Checked for observe propagation</h1>
+        <div id="Outer">
+            Outer
+            <div id="Middle">
+                Middle
+                <div id="Inner">
+                    Inner
+                </div>
+            </div>
+    </div>
+
+    <script>
+        const outer = document.getElementById("Outer");
+        const middle = document.getElementById("Middle");
+        const inner = document.getElementById("Inner");
+
+        inner.addEventListener("click", function() {
+            this.style.backgroundColor = "green";
+            if (document.getElementById("check").checked) {
+                event.stopPropagation();
+            }
+        });
+        
+        middle.addEventListener("click", function() {
+            this.style.backgroundColor = "green";
+            if (document.getElementById("check").checked) {
+                event.stopPropagation();
+            }
+        });
+        outer.addEventListener("click", function() {
+            this.style.backgroundColor = "green";
+            if (document.getElementById("check").checked) {
+                event.stopPropagation();
+            }
+            
+        });
+    </script>
+</body>
+</html>

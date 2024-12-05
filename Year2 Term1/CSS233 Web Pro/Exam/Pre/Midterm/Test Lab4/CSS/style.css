@@ -1,0 +1,83 @@
+header {
+    background-image: linear-gradient(to bottom right, rgba(19,150,30, 0.77), rgba(27, 189, 238, 0.77)),url('../img/background.jpeg');
+    height: 100vh;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+}
+
+img {
+    width: 50px;
+    margin: 35px;
+}
+
+h1  {
+    height: 500px;
+    display: flex;
+    justify-content: center; /*จัดตรงกลางซ้าย-ขวา*/
+    align-items: center; /*จัดตรงกลางบน-ล่าง*/
+    flex-direction: column; /*จัดให้ลงมาข้างล่างแบบแยกแถว*/
+    gap: 10px;
+    color: white;
+    font-family: Poppins,sans-serif;
+    text-transform: uppercase;
+}
+
+span:first-child {
+    font-size: 95px;
+}
+
+span:nth-child(2n) {
+    font-size: 32px;
+} 
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins,sans-serif;
+    font-size: 14px;
+    bottom: 10px; /*ปุ่ม*/
+    width: 280px;
+    height: 50px;
+    background: white;
+    border-radius: 30px; /*ความมนของปุ่ม*/
+    color: gray;
+    text-decoration: none; /*เอาเส้นใต้ออก*/
+}
+
+a:hover {
+    box-shadow:rgb(158, 165, 177) 0px 3px 3px 3px;
+    transform: translate(0px, -5px);
+}
+
+.text1 {
+    animation-name: anitext1;
+    animation-duration: 5s;
+}
+
+.text2 {
+    animation-name: anitext2;
+    animation-duration: 10s;
+}
+
+@keyframes anitext1 {
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes anitext2 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
